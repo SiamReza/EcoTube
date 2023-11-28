@@ -5,11 +5,15 @@ import IntroductionSection from '../components/about/IntroductionSection';
 import FeaturesSection from '../components/about/FeaturesSection';
 import CommitmentSection from '../components/about/CommitmentSection';
 import FAQSection from '../components/about/FAQSection';
+import NavBar from '../components/NavBar';
 
 
 const About = () => {
     const theme = useTheme();
   return (
+    <>
+    <NavBar/>
+    
     <Box
     sx={{
       bgcolor: theme.palette.background.default,
@@ -17,6 +21,7 @@ const About = () => {
       py: 8,
     }}
   >
+  
     <HeaderSection />
     <IntroductionSection />
     <FeaturesSection />
@@ -24,6 +29,7 @@ const About = () => {
     <FAQSection />
     {/* You can continue adding more sections here */}
   </Box>
+  </>
   )
 }
 
