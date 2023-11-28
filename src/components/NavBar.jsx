@@ -62,7 +62,7 @@ export default function NavBar() {
         </IconButton>
         <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
           <img
-            loading="lazy"
+            // loading="lazy"
             src={logo}
             alt="EcoTube Logo"
             style={{ maxHeight: "60px", cursor: "pointer" }}

@@ -42,7 +42,7 @@ const CommitmentSection = () => {
           <Grid item xs={12} md={7}>
             <Box
               component="img"
-              loading="lazy"
+              // loading="lazy"
               src={commitment}
               alt="Eco-friendly vs Traditional Platform"
               sx={{

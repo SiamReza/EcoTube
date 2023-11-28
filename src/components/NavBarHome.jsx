@@ -11,7 +11,7 @@ export default function NavBarHome() {
     <AppBar position="static" sx={{backgroundColor: "#111111"}}>
       <Toolbar>
       <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-          <img src={logo} alt="EcoTube Logo" style={{ maxHeight: '60px', cursor: 'pointer' }} onClick={()=>navigate('/')} loading="lazy"/>
+          <img src={logo} alt="EcoTube Logo" style={{ maxHeight: '60px', cursor: 'pointer' }} onClick={()=>navigate('/')} />
         </Box>
         <Box sx={{ display: 'flex' }}>
           <Button color="inherit" onClick={()=> navigate('/about')}>About</Button>
