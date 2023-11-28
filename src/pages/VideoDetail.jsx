@@ -110,7 +110,7 @@ const VideoDetail = () => {
           alignItems="center"
         >
           {!showRelatedVideos && (
-            <Button variant="contained" onClick={fetchRelatedVideos}>
+            <Button variant="outlined" onClick={fetchRelatedVideos}>
               Show Related Videos
             </Button>
           )}
