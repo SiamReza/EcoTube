@@ -1,4 +1,3 @@
-// FeaturesSection.jsx
 import React from "react";
 import {
   Grid,
@@ -8,9 +7,9 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import lowDataMode from "../../assets/low_data_mode.png";
-import greenHosting from "../../assets/green_hosting.png";
-import efficientCoding from "../../assets/efficient_coding.png";
+import lowDataMode from "../../assets/low_data_mode.webp";
+import greenHosting from "../../assets/green_hosting.webp";
+import efficientCoding from "../../assets/efficient_coding.webp";
 
 const features = [
   {

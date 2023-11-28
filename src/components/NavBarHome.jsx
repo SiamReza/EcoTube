@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import logo from '../assets/Logo.png';
+import logo from '../assets/Logo.webp';
 import { useNavigate } from 'react-router-dom';
 
 export default function NavBarHome() {
@@ -11,7 +11,7 @@ export default function NavBarHome() {
     <AppBar position="static" sx={{backgroundColor: "#111111"}}>
       <Toolbar>
       <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-          <img src={logo} alt="EcoTube Logo" style={{ maxHeight: '60px', cursor: 'pointer' }} onClick={()=>navigate('/')}/>
+          <img src={logo} alt="EcoTube Logo" style={{ maxHeight: '60px', cursor: 'pointer' }} onClick={()=>navigate('/')} loading="lazy"/>
         </Box>
         <Box sx={{ display: 'flex' }}>
           <Button color="inherit" onClick={()=> navigate('/about')}>About</Button>

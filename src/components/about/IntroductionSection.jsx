@@ -1,23 +1,6 @@
-// import React from 'react';
-// import { Box, Typography } from '@mui/material';
-
-// const IntroductionSection = () => {
-//   return (
-//     <Box sx={{ maxWidth: '650px', mx: 'auto', textAlign: 'center', p: { xs: 3, sm: 6, md: 8 } }}>
-//         <Typography variant="subtitle1" sx={{ maxWidth: '650px', mx: 'auto', textAlign: 'center', my: 4 }}>
-//       The internet consumes more electricity than the entire United Kingdom. Every search query, video stream, and page load contributes to a digital carbon footprint that's affecting our planet. Introducing EcoTube, the platform that combines video streaming with eco-consciousness, because Earth deserves better.
-//     </Typography>
-//     </Box>
-    
-//   );
-// };
-
-// export default IntroductionSection;
-
-
 import React from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
-import logoOnly from '../../assets/LogoOnly.png';
+import logoOnly from '../../assets/LogoOnly.webp';
 const IntroductionSection = () => {
   const theme = useTheme();
 

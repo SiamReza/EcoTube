@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Box, InputBase, Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import EcoTubeLogo from '../assets/EcoTube.png'; 
+import EcoTubeLogo from '../assets/EcoTube.webp'; 
 import { useNavigate } from "react-router-dom";
 
 export default function SearchAreaHome() {

@@ -1,8 +1,18 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Button, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Button,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import logo from "../assets/Logo.png";
+import logo from "../assets/Logo.webp";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
@@ -13,7 +23,7 @@ export default function NavBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
-      setDrawerOpen(!drawerOpen);
+    setDrawerOpen(!drawerOpen);
   };
 
   const onhandleSubmit = (e) => {
@@ -27,77 +37,61 @@ export default function NavBar() {
   };
 
   const navItems = (
-    <Box sx={{ display: 'flex' }}>
-        <Button color="inherit" onClick={() => navigate('/about')}>About</Button>
-        <Button color="inherit">Settings</Button>
-        <Button color="inherit" variant="outlined">Signup</Button>
+    <Box sx={{ display: "flex" }}>
+      <Button color="inherit" onClick={() => navigate("/about")}>
+        About
+      </Button>
+      <Button color="inherit">Settings</Button>
+      <Button color="inherit" variant="outlined">
+        Signup
+      </Button>
     </Box>
-);
+  );
 
   return (
-    // <AppBar position="static" sx={{ backgroundColor: "#111111" }}>
-    //   <Toolbar>
-    //     <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-    //       <img src={logo} alt="EcoTube Logo" style={{ maxHeight: "60px", cursor: 'pointer' }} onClick={()=>navigate('/')}/>
-    //       <SearchBar
-    //         searchTerm={searchTerm}
-    //         setSearchTerm={setSearchTerm}
-    //         onhandleSubmit={onhandleSubmit}
-    //       />
-    //     </Box>
-    //     <Box sx={{ display: "flex" }}>
-    //       <Button color="inherit" onClick={() => navigate("/about")}>
-    //         About
-    //       </Button>
-    //       <Button color="inherit">Settings</Button>
-    //       <Button color="inherit" variant="outlined">
-    //         Signup
-    //       </Button>
-    //     </Box>
-    //   </Toolbar>
-    // </AppBar>
-
     <AppBar position="sticky" sx={{ backgroundColor: "#111111" }}>
-    <Toolbar>
+      <Toolbar>
         <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2, display: { xs: 'block', md: 'none' } }}
-            onClick={handleDrawerToggle}
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2, display: { xs: "block", md: "none" } }}
+          onClick={handleDrawerToggle}
         >
-            <MenuIcon />
+          <MenuIcon />
         </IconButton>
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-            <img 
-                src={logo} 
-                alt="EcoTube Logo" 
-                style={{ maxHeight: '60px', cursor: 'pointer' }} 
-                onClick={() => navigate('/')}
-            />
-            <SearchBar 
-                searchTerm={searchTerm} 
-                setSearchTerm={setSearchTerm} 
-                onhandleSubmit={onhandleSubmit} 
-            />
+        <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+          <img
+            loading="lazy"
+            src={logo}
+            alt="EcoTube Logo"
+            style={{ maxHeight: "60px", cursor: "pointer" }}
+            onClick={() => navigate("/")}
+          />
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            onhandleSubmit={onhandleSubmit}
+          />
         </Box>
-        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            {navItems}
-        </Box>
-    </Toolbar>
-    <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={handleDrawerToggle}
-    >
+        <Box sx={{ display: { xs: "none", md: "flex" } }}>{navItems}</Box>
+      </Toolbar>
+      <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
         <List>
-            {['About', 'Settings', 'Signup'].map((text) => (
-                <ListItem button key={text} onClick={() => { setDrawerOpen(false); navigate(`/${text.toLowerCase()}`); }}>
-                    <ListItemText primary={text} />
-                </ListItem>
-            ))}
+          {["About", "Settings", "Signup"].map((text) => (
+            <ListItem
+              button
+              key={text}
+              onClick={() => {
+                setDrawerOpen(false);
+                navigate(`/${text.toLowerCase()}`);
+              }}
+            >
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
         </List>
-    </Drawer>
-</AppBar>
+      </Drawer>
+    </AppBar>
   );
 }
