@@ -58490,7 +58490,8 @@ const VideoDetail = ()=>{
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPlayerDefault.default), {
                                         url: `https://www.youtube.com/watch?v=${id}`,
                                         className: "react-player",
-                                        controls: true
+                                        controls: true,
+                                        loading: "lazy"
                                     }, void 0, false, {
                                         fileName: "src/pages/VideoDetail.jsx",
                                         lineNumber: 59,
