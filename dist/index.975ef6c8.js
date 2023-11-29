@@ -33747,8 +33747,7 @@ function NavBarHome() {
                             maxHeight: "60px",
                             cursor: "pointer"
                         },
-                        onClick: ()=>navigate("/"),
-                        loading: "lazy"
+                        onClick: ()=>navigate("/")
                     }, void 0, false, {
                         fileName: "src/components/NavBarHome.jsx",
                         lineNumber: 14,
@@ -33822,7 +33821,7 @@ $RefreshReg$(_c, "NavBarHome");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/Logo.webp":"fT2dk"}],"40376":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"40376":[function(require,module,exports) {
 /**
  * @mui/material v5.14.18
  *
@@ -56536,7 +56535,45 @@ const toolbarClasses = (0, _utils.unstable_generateUtilityClasses)("MuiToolbar",
 ]);
 exports.default = toolbarClasses;
 
-},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
+},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fT2dk":[function(require,module,exports) {
+module.exports = require("63c116bfd33e05ad").getBundleURL("bLxZJ") + "Logo.19ee082b.webp" + "?" + Date.now();
+
+},{"63c116bfd33e05ad":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -57138,44 +57175,6 @@ module.exports = require("9e039173d01172ab");
     exports.setSignature = setSignature;
 })();
 
-},{}],"fT2dk":[function(require,module,exports) {
-module.exports = require("63c116bfd33e05ad").getBundleURL("bLxZJ") + "Logo.19ee082b.webp" + "?" + Date.now();
-
-},{"63c116bfd33e05ad":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
 },{}],"dmmRn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ac22 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -57302,7 +57301,7 @@ $RefreshReg$(_c, "SearchAreaHome");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Search":"b4Utn","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/EcoTube.webp":"iMwNg"}],"b4Utn":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Search":"b4Utn","../assets/EcoTube.webp":"iMwNg","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b4Utn":[function(require,module,exports) {
 "use strict";
 "use client";
 var _interopRequireDefault = require("fba53bc247860689");
@@ -57463,7 +57462,6 @@ const HeaderSection = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                 component: "img",
-                loading: "lazy",
                 src: (0, _logoWebpDefault.default),
                 alt: "EcoTube Logo",
                 sx: {
@@ -57518,7 +57516,7 @@ $RefreshReg$(_c, "HeaderSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../assets/Logo.webp":"fT2dk"}],"7WPPm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../../assets/Logo.webp":"fT2dk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7WPPm":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1f64 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -57626,7 +57624,7 @@ $RefreshReg$(_c, "IntroductionSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../assets/LogoOnly.webp":"6AYbL"}],"6AYbL":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../../assets/LogoOnly.webp":"6AYbL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6AYbL":[function(require,module,exports) {
 module.exports = require("baabbdf444938d32").getBundleURL("bLxZJ") + "LogoOnly.5541eede.webp" + "?" + Date.now();
 
 },{"baabbdf444938d32":"lgJ39"}],"gdKbs":[function(require,module,exports) {
@@ -57767,7 +57765,7 @@ $RefreshReg$(_c, "FeaturesSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../assets/low_data_mode.webp":"7UyK9","../../assets/green_hosting.webp":"1AxNc","../../assets/efficient_coding.webp":"dJeDN"}],"7UyK9":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../../assets/low_data_mode.webp":"7UyK9","../../assets/green_hosting.webp":"1AxNc","../../assets/efficient_coding.webp":"dJeDN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7UyK9":[function(require,module,exports) {
 module.exports = require("924e095b9936a7a0").getBundleURL("bLxZJ") + "low_data_mode.1b56162f.webp" + "?" + Date.now();
 
 },{"924e095b9936a7a0":"lgJ39"}],"1AxNc":[function(require,module,exports) {
@@ -57868,7 +57866,7 @@ const CommitmentSection = ()=>{
                         md: 7,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                             component: "img",
-                            loading: "lazy",
+                            // loading="lazy"
                             src: (0, _commitmentWebpDefault.default),
                             alt: "Eco-friendly vs Traditional Platform",
                             sx: {
@@ -57924,7 +57922,7 @@ $RefreshReg$(_c, "CommitmentSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../assets/commitment.webp":"ccH9A"}],"ccH9A":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../../assets/commitment.webp":"ccH9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ccH9A":[function(require,module,exports) {
 module.exports = require("aacc527e95695fc6").getBundleURL("bLxZJ") + "commitment.fe258c9e.webp" + "?" + Date.now();
 
 },{"aacc527e95695fc6":"lgJ39"}],"k9y8z":[function(require,module,exports) {
@@ -58207,7 +58205,7 @@ function NavBar() {
                         },
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                loading: "lazy",
+                                // loading="lazy"
                                 src: (0, _logoWebpDefault.default),
                                 alt: "EcoTube Logo",
                                 style: {
@@ -58312,7 +58310,7 @@ $RefreshReg$(_c, "NavBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/Logo.webp":"fT2dk"}],"eYtXA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eYtXA":[function(require,module,exports) {
 "use strict";
 "use client";
 var _interopRequireDefault = require("1a2787d0d84e43df");
@@ -58492,8 +58490,7 @@ const VideoDetail = ()=>{
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPlayerDefault.default), {
                                         url: `https://www.youtube.com/watch?v=${id}`,
                                         className: "react-player",
-                                        controls: true,
-                                        loading: "lazy"
+                                        controls: true
                                     }, void 0, false, {
                                         fileName: "src/pages/VideoDetail.jsx",
                                         lineNumber: 59,
