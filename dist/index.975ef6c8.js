@@ -33745,6 +33745,8 @@ function NavBarHome() {
                         alt: "EcoTube Logo",
                         style: {
                             maxHeight: "60px",
+                            width: "199px",
+                            height: "58px",
                             cursor: "pointer"
                         },
                         onClick: ()=>navigate("/")
@@ -57220,6 +57222,8 @@ function SearchAreaHome() {
                 alt: "EcoTube Logo",
                 style: {
                     maxHeight: "100px",
+                    height: "99px",
+                    width: "313px",
                     marginBottom: "20px"
                 }
             }, void 0, false, {

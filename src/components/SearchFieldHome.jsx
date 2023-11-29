@@ -25,7 +25,7 @@ export default function SearchAreaHome() {
       alignItems: 'center',
       height: '80vh'
     }}>
-      <img src={EcoTubeLogo} alt="EcoTube Logo" style={{ maxHeight: '100px', marginBottom: '20px' }} />
+      <img src={EcoTubeLogo} alt="EcoTube Logo" style={{ maxHeight: '100px', height:'99px',width:"313px", marginBottom: '20px' }} />
       <Paper
         component="form"
         onSubmit={onhandleSubmit}
