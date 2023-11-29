@@ -57386,33 +57386,33 @@ const About = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 25,
+                        lineNumber: 24,
                         columnNumber: 5
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _introductionSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 26,
+                        lineNumber: 25,
                         columnNumber: 5
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featuresSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 27,
+                        lineNumber: 26,
                         columnNumber: 5
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _commitmentSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 28,
+                        lineNumber: 27,
                         columnNumber: 5
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _faqsectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 29,
+                        lineNumber: 28,
                         columnNumber: 5
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/About.jsx",
-                lineNumber: 17,
+                lineNumber: 16,
                 columnNumber: 5
             }, undefined)
         ]

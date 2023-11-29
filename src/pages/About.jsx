@@ -13,7 +13,6 @@ const About = () => {
   return (
     <>
     <NavBar/>
-    
     <Box
     sx={{
       bgcolor: theme.palette.background.default,
