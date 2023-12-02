@@ -57378,8 +57378,8 @@ const About = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navBarDefault.default), {}, void 0, false, {
                 fileName: "src/pages/About.jsx",
-                lineNumber: 15,
-                columnNumber: 5
+                lineNumber: 14,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                 sx: {
@@ -57390,34 +57390,34 @@ const About = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 24,
-                        columnNumber: 5
+                        lineNumber: 22,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _introductionSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 25,
-                        columnNumber: 5
+                        lineNumber: 23,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featuresSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 26,
-                        columnNumber: 5
+                        lineNumber: 24,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _commitmentSectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 27,
-                        columnNumber: 5
+                        lineNumber: 25,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _faqsectionDefault.default), {}, void 0, false, {
                         fileName: "src/pages/About.jsx",
-                        lineNumber: 28,
-                        columnNumber: 5
+                        lineNumber: 26,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/About.jsx",
-                lineNumber: 16,
-                columnNumber: 5
+                lineNumber: 15,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
