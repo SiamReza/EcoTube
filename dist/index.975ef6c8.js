@@ -33759,6 +33759,9 @@ function NavBarHome() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
                 color: "inherit",
+                sx: {
+                    color: "primary.main"
+                },
                 onClick: ()=>navigate("/about"),
                 children: "About"
             }, void 0, false, {
@@ -58609,7 +58612,7 @@ $RefreshReg$(_c, "NavBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/icons-material/Search":"b4Utn","../assets/LogoOnly.webp":"6AYbL"}],"lM1DZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","@mui/icons-material/Search":"b4Utn","../assets/Logo.webp":"fT2dk","../assets/LogoOnly.webp":"6AYbL","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lM1DZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e029 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -59036,7 +59039,7 @@ $RefreshReg$(_c, "VideoDetail");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-player":"6tM2f","@mui/material":"40376","@mui/icons-material/CheckCircle":"7Uuk2","../components/Videos":"iBwUD","../components/Loader":"1OxQ9","../utils/fetchFromApi":"gz4GA","../components/NavBar":"eqUVf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Comments":"fYpIV"}],"6tM2f":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-player":"6tM2f","@mui/material":"40376","@mui/icons-material/CheckCircle":"7Uuk2","../components/Videos":"iBwUD","../components/Comments":"fYpIV","../components/Loader":"1OxQ9","../utils/fetchFromApi":"gz4GA","../components/NavBar":"eqUVf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6tM2f":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61441,6 +61444,84 @@ var _c;
 $RefreshReg$(_c, "Loader");
 
   $parcel$ReactRefreshHelpers$ca5e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fYpIV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4a8f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4a8f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _material = require("@mui/material");
+const Comments = ({ comments })=>{
+    if (!comments || comments.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: "No comments found."
+    }, void 0, false, {
+        fileName: "src/components/Comments.jsx",
+        lineNumber: 5,
+        columnNumber: 50
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+        sx: {
+            padding: "20px"
+        },
+        children: comments.map((comment, index)=>{
+            const topLevelComment = comment?.snippet?.topLevelComment?.snippet;
+            if (!topLevelComment) return null; // Skips rendering if data is incomplete
+            const displayName = topLevelComment.authorDisplayName;
+            const cleanedDisplayName = displayName?.startsWith("@") ? displayName.substring(1) : displayName;
+            const commentText = topLevelComment.textOriginal;
+            console.log(commentText);
+            console.log(cleanedDisplayName);
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                sx: {
+                    marginBottom: "10px"
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "subtitle2",
+                        color: "gray",
+                        children: cleanedDisplayName
+                    }, void 0, false, {
+                        fileName: "src/components/Comments.jsx",
+                        lineNumber: 21,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "body2",
+                        children: commentText
+                    }, void 0, false, {
+                        fileName: "src/components/Comments.jsx",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, index, true, {
+                fileName: "src/components/Comments.jsx",
+                lineNumber: 20,
+                columnNumber: 11
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Comments.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Comments;
+exports.default = Comments;
+var _c;
+$RefreshReg$(_c, "Comments");
+
+  $parcel$ReactRefreshHelpers$4a8f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -65828,85 +65909,7 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
 });
 exports.default = HttpStatusCode;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fYpIV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4a8f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4a8f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _material = require("@mui/material");
-const Comments = ({ comments })=>{
-    if (!comments || comments.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-        children: "No comments found."
-    }, void 0, false, {
-        fileName: "src/components/Comments.jsx",
-        lineNumber: 5,
-        columnNumber: 50
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-        sx: {
-            padding: "20px"
-        },
-        children: comments.map((comment, index)=>{
-            const topLevelComment = comment?.snippet?.topLevelComment?.snippet;
-            if (!topLevelComment) return null; // Skips rendering if data is incomplete
-            const displayName = topLevelComment.authorDisplayName;
-            const cleanedDisplayName = displayName?.startsWith("@") ? displayName.substring(1) : displayName;
-            const commentText = topLevelComment.textOriginal;
-            console.log(commentText);
-            console.log(cleanedDisplayName);
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-                sx: {
-                    marginBottom: "10px"
-                },
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                        variant: "subtitle2",
-                        color: "gray",
-                        children: cleanedDisplayName
-                    }, void 0, false, {
-                        fileName: "src/components/Comments.jsx",
-                        lineNumber: 21,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                        variant: "body2",
-                        children: commentText
-                    }, void 0, false, {
-                        fileName: "src/components/Comments.jsx",
-                        lineNumber: 24,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, index, true, {
-                fileName: "src/components/Comments.jsx",
-                lineNumber: 20,
-                columnNumber: 11
-            }, undefined);
-        })
-    }, void 0, false, {
-        fileName: "src/components/Comments.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Comments;
-exports.default = Comments;
-var _c;
-$RefreshReg$(_c, "Comments");
-
-  $parcel$ReactRefreshHelpers$4a8f.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8rjaY":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8rjaY":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ed0f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

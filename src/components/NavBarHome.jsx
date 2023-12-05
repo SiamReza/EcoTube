@@ -41,7 +41,7 @@ export default function NavBarHome() {
 
   const navigationItems = (
     <>
-      <Button color="inherit" onClick={()=> navigate('/about')}>About</Button>
+      <Button color="inherit" sx={{color:"primary.main"}} onClick={()=> navigate('/about')}>About</Button>
       <Button color="inherit">Settings</Button>
       <Button color="inherit" variant="outlined">Signup</Button>
     </>
