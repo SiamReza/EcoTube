@@ -33714,12 +33714,35 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$cc47.prelude(module);
 
 try {
+// import * as React from 'react';
+// import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+// import logo from '../assets/Logo.webp';
+// import { useNavigate } from 'react-router-dom';
+// export default function NavBarHome() {
+//     const navigate = useNavigate();
+//   return (
+//     <AppBar position="static" sx={{backgroundColor: "#111111"}}>
+//       <Toolbar>
+//       <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+//           <img src={logo} alt="EcoTube Logo" style={{ maxHeight: '60px', width:"199px", height:"58px", cursor: 'pointer' }} onClick={()=>navigate('/')} />
+//         </Box>
+//         <Box sx={{ display: 'flex' }}>
+//           <Button color="inherit" onClick={()=> navigate('/about')}>About</Button>
+//           <Button color="inherit">Settings</Button>
+//           <Button color="inherit" variant="outlined">Signup</Button>
+//         </Box>
+//       </Toolbar>
+//     </AppBar>
+//   );
+// }
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>NavBarHome);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _material = require("@mui/material");
+var _menu = require("@mui/icons-material/Menu");
+var _menuDefault = parcelHelpers.interopDefault(_menu);
 var _logoWebp = require("../assets/Logo.webp");
 var _logoWebpDefault = parcelHelpers.interopDefault(_logoWebp);
 var _reactRouterDom = require("react-router-dom");
@@ -33727,6 +33750,41 @@ var _s = $RefreshSig$();
 function NavBarHome() {
     _s();
     const navigate = (0, _reactRouterDom.useNavigate)();
+    const isMobile = (0, _material.useMediaQuery)("(max-width:600px)");
+    const [drawerOpen, setDrawerOpen] = _react.useState(false);
+    const handleDrawerToggle = ()=>{
+        setDrawerOpen(!drawerOpen);
+    };
+    const navigationItems = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
+                color: "inherit",
+                onClick: ()=>navigate("/about"),
+                children: "About"
+            }, void 0, false, {
+                fileName: "src/components/NavBarHome.jsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
+                color: "inherit",
+                children: "Settings"
+            }, void 0, false, {
+                fileName: "src/components/NavBarHome.jsx",
+                lineNumber: 45,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
+                color: "inherit",
+                variant: "outlined",
+                children: "Signup"
+            }, void 0, false, {
+                fileName: "src/components/NavBarHome.jsx",
+                lineNumber: 46,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.AppBar), {
         position: "static",
         sx: {
@@ -33752,66 +33810,67 @@ function NavBarHome() {
                         onClick: ()=>navigate("/")
                     }, void 0, false, {
                         fileName: "src/components/NavBarHome.jsx",
-                        lineNumber: 14,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/NavBarHome.jsx",
-                    lineNumber: 13,
-                    columnNumber: 7
+                    lineNumber: 53,
+                    columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                isMobile ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.IconButton), {
+                            color: "inherit",
+                            edge: "end",
+                            onClick: handleDrawerToggle,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuDefault.default), {}, void 0, false, {
+                                fileName: "src/components/NavBarHome.jsx",
+                                lineNumber: 59,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/NavBarHome.jsx",
+                            lineNumber: 58,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Drawer), {
+                            anchor: "right",
+                            open: drawerOpen,
+                            onClose: handleDrawerToggle,
+                            children: navigationItems
+                        }, void 0, false, {
+                            fileName: "src/components/NavBarHome.jsx",
+                            lineNumber: 61,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                     sx: {
                         display: "flex"
                     },
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
-                            color: "inherit",
-                            onClick: ()=>navigate("/about"),
-                            children: "About"
-                        }, void 0, false, {
-                            fileName: "src/components/NavBarHome.jsx",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
-                            color: "inherit",
-                            children: "Settings"
-                        }, void 0, false, {
-                            fileName: "src/components/NavBarHome.jsx",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
-                            color: "inherit",
-                            variant: "outlined",
-                            children: "Signup"
-                        }, void 0, false, {
-                            fileName: "src/components/NavBarHome.jsx",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: navigationItems
+                }, void 0, false, {
                     fileName: "src/components/NavBarHome.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
+                    lineNumber: 66,
+                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/NavBarHome.jsx",
-            lineNumber: 12,
+            lineNumber: 52,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/NavBarHome.jsx",
-        lineNumber: 11,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }
-_s(NavBarHome, "CzcTeTziyjMsSrAVmHuCCb6+Bfg=", false, function() {
+_s(NavBarHome, "kj8GWKVpbp2ESPzyiOZgkWPw2JA=", false, function() {
     return [
-        (0, _reactRouterDom.useNavigate)
+        (0, _reactRouterDom.useNavigate),
+        (0, _material.useMediaQuery)
     ];
 });
 _c = NavBarHome;
@@ -33823,7 +33882,7 @@ $RefreshReg$(_c, "NavBarHome");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"40376":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"40376":[function(require,module,exports) {
 /**
  * @mui/material v5.14.18
  *
@@ -34389,7 +34448,7 @@ var _unstableTrapFocus = require("./Unstable_TrapFocus");
 var _unstableTrapFocusDefault = parcelHelpers.interopDefault(_unstableTrapFocus);
 "use client";
 
-},{"./colors":false,"./styles":"1lzai","./utils":false,"./Accordion":"fQZka","./AccordionActions":false,"./AccordionDetails":"8mhf8","./AccordionSummary":"0u6LC","./Alert":false,"./AlertTitle":false,"./AppBar":"c3vaq","./Autocomplete":false,"./Avatar":false,"./AvatarGroup":false,"./Backdrop":false,"./Badge":false,"./BottomNavigation":false,"./BottomNavigationAction":false,"./Box":"eQD0H","./Breadcrumbs":false,"./Button":"73csw","./ButtonBase":false,"./ButtonGroup":false,"./Card":"hWYZ3","./CardActionArea":false,"./CardActions":false,"./CardContent":"lVecn","./CardHeader":false,"./CardMedia":"kaOTJ","./Checkbox":false,"./Chip":false,"./CircularProgress":"gnTt5","./ClickAwayListener":false,"./Collapse":false,"./Container":"75pQf","./CssBaseline":"eRYsJ","./darkScrollbar":false,"./Dialog":false,"./DialogActions":false,"./DialogContent":false,"./DialogContentText":false,"./DialogTitle":false,"./Divider":false,"./Drawer":"hMEec","./Fab":false,"./Fade":false,"./FilledInput":false,"./FormControl":false,"./FormControlLabel":false,"./FormGroup":false,"./FormHelperText":false,"./FormLabel":false,"./Grid":"c17UE","./Unstable_Grid2":false,"./Grow":false,"./Hidden":false,"./Icon":false,"./IconButton":"38BrD","./ImageList":false,"./ImageListItem":false,"./ImageListItemBar":false,"./Input":false,"./InputAdornment":false,"./InputBase":"1ezJA","./InputLabel":false,"./LinearProgress":false,"./Link":false,"./List":"PwNf5","./ListItem":"kkzrF","./ListItemAvatar":false,"./ListItemButton":false,"./ListItemIcon":false,"./ListItemSecondaryAction":false,"./ListItemText":"g3ISx","./ListSubheader":false,"./Menu":false,"./MenuItem":false,"./MenuList":false,"./MobileStepper":false,"./Modal":false,"./NativeSelect":false,"./NoSsr":false,"./OutlinedInput":false,"./Pagination":false,"./PaginationItem":false,"./Paper":"6IiTP","./Popover":false,"./Popper":false,"./Portal":false,"./Radio":false,"./RadioGroup":false,"./Rating":false,"./ScopedCssBaseline":false,"./Select":false,"./Skeleton":false,"./Slide":false,"./Slider":false,"./Snackbar":false,"./SnackbarContent":false,"./SpeedDial":false,"./SpeedDialAction":false,"./SpeedDialIcon":false,"./Stack":"cuThX","./Step":false,"./StepButton":false,"./StepConnector":false,"./StepContent":false,"./StepIcon":false,"./StepLabel":false,"./Stepper":false,"./SvgIcon":false,"./SwipeableDrawer":false,"./Switch":false,"./Tab":false,"./Table":false,"./TableBody":false,"./TableCell":false,"./TableContainer":false,"./TableFooter":false,"./TableHead":false,"./TablePagination":false,"./TableRow":false,"./TableSortLabel":false,"./Tabs":false,"./TabScrollButton":false,"./TextField":false,"./TextareaAutosize":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Toolbar":"h8rSE","./Tooltip":false,"./Typography":"faxSz","./useMediaQuery":false,"./usePagination":false,"./useScrollTrigger":false,"./Zoom":false,"./useAutocomplete":false,"./GlobalStyles":false,"@mui/base/composeClasses":false,"./generateUtilityClass":false,"./generateUtilityClasses":false,"./Unstable_TrapFocus":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1lzai":[function(require,module,exports) {
+},{"./colors":false,"./styles":"1lzai","./utils":false,"./Accordion":"fQZka","./AccordionActions":false,"./AccordionDetails":"8mhf8","./AccordionSummary":"0u6LC","./Alert":false,"./AlertTitle":false,"./AppBar":"c3vaq","./Autocomplete":false,"./Avatar":false,"./AvatarGroup":false,"./Backdrop":false,"./Badge":false,"./BottomNavigation":false,"./BottomNavigationAction":false,"./Box":"eQD0H","./Breadcrumbs":false,"./Button":"73csw","./ButtonBase":false,"./ButtonGroup":false,"./Card":"hWYZ3","./CardActionArea":false,"./CardActions":false,"./CardContent":"lVecn","./CardHeader":false,"./CardMedia":"kaOTJ","./Checkbox":false,"./Chip":false,"./CircularProgress":"gnTt5","./ClickAwayListener":false,"./Collapse":false,"./Container":"75pQf","./CssBaseline":"eRYsJ","./darkScrollbar":false,"./Dialog":false,"./DialogActions":false,"./DialogContent":false,"./DialogContentText":false,"./DialogTitle":false,"./Divider":false,"./Drawer":"hMEec","./Fab":false,"./Fade":false,"./FilledInput":false,"./FormControl":false,"./FormControlLabel":false,"./FormGroup":false,"./FormHelperText":false,"./FormLabel":false,"./Grid":"c17UE","./Unstable_Grid2":false,"./Grow":false,"./Hidden":false,"./Icon":false,"./IconButton":"38BrD","./ImageList":false,"./ImageListItem":false,"./ImageListItemBar":false,"./Input":false,"./InputAdornment":false,"./InputBase":"1ezJA","./InputLabel":false,"./LinearProgress":false,"./Link":false,"./List":"PwNf5","./ListItem":"kkzrF","./ListItemAvatar":false,"./ListItemButton":false,"./ListItemIcon":false,"./ListItemSecondaryAction":false,"./ListItemText":"g3ISx","./ListSubheader":false,"./Menu":false,"./MenuItem":false,"./MenuList":false,"./MobileStepper":false,"./Modal":false,"./NativeSelect":false,"./NoSsr":false,"./OutlinedInput":false,"./Pagination":false,"./PaginationItem":false,"./Paper":"6IiTP","./Popover":false,"./Popper":false,"./Portal":false,"./Radio":false,"./RadioGroup":false,"./Rating":false,"./ScopedCssBaseline":false,"./Select":false,"./Skeleton":false,"./Slide":false,"./Slider":false,"./Snackbar":false,"./SnackbarContent":false,"./SpeedDial":false,"./SpeedDialAction":false,"./SpeedDialIcon":false,"./Stack":"cuThX","./Step":false,"./StepButton":false,"./StepConnector":false,"./StepContent":false,"./StepIcon":false,"./StepLabel":false,"./Stepper":false,"./SvgIcon":false,"./SwipeableDrawer":false,"./Switch":false,"./Tab":false,"./Table":false,"./TableBody":false,"./TableCell":false,"./TableContainer":false,"./TableFooter":false,"./TableHead":false,"./TablePagination":false,"./TableRow":false,"./TableSortLabel":false,"./Tabs":false,"./TabScrollButton":false,"./TextField":false,"./TextareaAutosize":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Toolbar":"h8rSE","./Tooltip":false,"./Typography":"faxSz","./useMediaQuery":"eeOzk","./usePagination":false,"./useScrollTrigger":false,"./Zoom":false,"./useAutocomplete":false,"./GlobalStyles":false,"@mui/base/composeClasses":false,"./generateUtilityClass":false,"./generateUtilityClasses":false,"./Unstable_TrapFocus":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1lzai":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "THEME_ID", ()=>(0, _identifierDefault.default));
@@ -36753,7 +36812,7 @@ function experimental_sx() {
     throw new Error(`MUI: The \`experimental_sx\` has been moved to \`theme.unstable_sx\`.For more details, see https://github.com/mui/material-ui/pull/35150.`);
 }
 
-},{"@mui/utils":"cttLn","@mui/styled-engine":"eTow5","./GlobalStyles":"7Xt14","./borders":false,"./breakpoints":"jN5Vx","./compose":false,"./display":false,"./flexbox":false,"./cssGrid":false,"./palette":false,"./positions":false,"./shadows":false,"./sizing":false,"./spacing":false,"./style":false,"./typography":false,"./styleFunctionSx":"bRwpN","./getThemeValue":false,"./Box":false,"./createBox":"bc03s","./createStyled":"csGHh","./styled":false,"./createTheme":"dmLcy","./createTheme/createBreakpoints":false,"./createTheme/createSpacing":false,"./createTheme/shape":false,"./useThemeProps":"eZlKz","./useTheme":"h9QTR","./useThemeWithoutDefault":false,"./colorManipulator":"cIbr0","./ThemeProvider":"4OCq3","./cssVars/createCssVarsProvider":false,"./cssVars/createGetCssVar":false,"./cssVars/cssVarsParser":false,"./cssVars/prepareCssVars":false,"./cssVars/createCssVarsTheme":false,"./responsivePropType":false,"./Container/createContainer":"21HQz","./Container":false,"./Unstable_Grid/Grid":false,"./Unstable_Grid":false,"./Stack/Stack":false,"./Stack":"6SnxG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eTow5":[function(require,module,exports) {
+},{"@mui/utils":"cttLn","@mui/styled-engine":"eTow5","./GlobalStyles":"7Xt14","./borders":false,"./breakpoints":"jN5Vx","./compose":false,"./display":false,"./flexbox":false,"./cssGrid":false,"./palette":false,"./positions":false,"./shadows":false,"./sizing":false,"./spacing":false,"./style":false,"./typography":false,"./styleFunctionSx":"bRwpN","./getThemeValue":false,"./Box":false,"./createBox":"bc03s","./createStyled":"csGHh","./styled":false,"./createTheme":"dmLcy","./createTheme/createBreakpoints":false,"./createTheme/createSpacing":false,"./createTheme/shape":false,"./useThemeProps":"eZlKz","./useTheme":"h9QTR","./useThemeWithoutDefault":"9Xcu1","./colorManipulator":"cIbr0","./ThemeProvider":"4OCq3","./cssVars/createCssVarsProvider":false,"./cssVars/createGetCssVar":false,"./cssVars/cssVarsParser":false,"./cssVars/prepareCssVars":false,"./cssVars/createCssVarsTheme":false,"./responsivePropType":false,"./Container/createContainer":"21HQz","./Container":false,"./Unstable_Grid/Grid":false,"./Unstable_Grid":false,"./Stack/Stack":false,"./Stack":"6SnxG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eTow5":[function(require,module,exports) {
 /**
  * @mui/styled-engine v5.14.18
  *
@@ -42244,7 +42303,7 @@ var _getThemeProps = require("./getThemeProps");
 var _getThemePropsDefault = parcelHelpers.interopDefault(_getThemeProps);
 "use client";
 
-},{"./useThemeProps":"kDJYN","./getThemeProps":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kDJYN":[function(require,module,exports) {
+},{"./useThemeProps":"kDJYN","./getThemeProps":"4T4Gi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kDJYN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useThemeProps);
@@ -56537,7 +56596,172 @@ const toolbarClasses = (0, _utils.unstable_generateUtilityClasses)("MuiToolbar",
 ]);
 exports.default = toolbarClasses;
 
-},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fT2dk":[function(require,module,exports) {
+},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eeOzk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _useMediaQueryDefault.default));
+var _useMediaQuery = require("./useMediaQuery");
+var _useMediaQueryDefault = parcelHelpers.interopDefault(_useMediaQuery);
+"use client";
+
+},{"./useMediaQuery":"3eg5d","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3eg5d":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>useMediaQuery);
+var _react = require("react");
+var _system = require("@mui/system");
+var _useEnhancedEffect = require("../utils/useEnhancedEffect");
+var _useEnhancedEffectDefault = parcelHelpers.interopDefault(_useEnhancedEffect);
+"use client";
+/**
+ * @deprecated Not used internally. Use `MediaQueryListEvent` from lib.dom.d.ts instead.
+ */ /**
+ * @deprecated Not used internally. Use `MediaQueryList` from lib.dom.d.ts instead.
+ */ /**
+ * @deprecated Not used internally. Use `(event: MediaQueryListEvent) => void` instead.
+ */ function useMediaQueryOld(query, defaultMatches, matchMedia, ssrMatchMedia, noSsr) {
+    const [match, setMatch] = _react.useState(()=>{
+        if (noSsr && matchMedia) return matchMedia(query).matches;
+        if (ssrMatchMedia) return ssrMatchMedia(query).matches;
+        // Once the component is mounted, we rely on the
+        // event listeners to return the correct matches value.
+        return defaultMatches;
+    });
+    (0, _useEnhancedEffectDefault.default)(()=>{
+        let active = true;
+        if (!matchMedia) return undefined;
+        const queryList = matchMedia(query);
+        const updateMatch = ()=>{
+            // Workaround Safari wrong implementation of matchMedia
+            // TODO can we remove it?
+            // https://github.com/mui/material-ui/pull/17315#issuecomment-528286677
+            if (active) setMatch(queryList.matches);
+        };
+        updateMatch();
+        // TODO: Use `addEventListener` once support for Safari < 14 is dropped
+        queryList.addListener(updateMatch);
+        return ()=>{
+            active = false;
+            queryList.removeListener(updateMatch);
+        };
+    }, [
+        query,
+        matchMedia
+    ]);
+    return match;
+}
+// eslint-disable-next-line no-useless-concat -- Workaround for https://github.com/webpack/webpack/issues/14814
+const maybeReactUseSyncExternalStore = _react["useSyncExternalStore"];
+function useMediaQueryNew(query, defaultMatches, matchMedia, ssrMatchMedia, noSsr) {
+    const getDefaultSnapshot = _react.useCallback(()=>defaultMatches, [
+        defaultMatches
+    ]);
+    const getServerSnapshot = _react.useMemo(()=>{
+        if (noSsr && matchMedia) return ()=>matchMedia(query).matches;
+        if (ssrMatchMedia !== null) {
+            const { matches } = ssrMatchMedia(query);
+            return ()=>matches;
+        }
+        return getDefaultSnapshot;
+    }, [
+        getDefaultSnapshot,
+        query,
+        ssrMatchMedia,
+        noSsr,
+        matchMedia
+    ]);
+    const [getSnapshot, subscribe] = _react.useMemo(()=>{
+        if (matchMedia === null) return [
+            getDefaultSnapshot,
+            ()=>()=>{}
+        ];
+        const mediaQueryList = matchMedia(query);
+        return [
+            ()=>mediaQueryList.matches,
+            (notify)=>{
+                // TODO: Use `addEventListener` once support for Safari < 14 is dropped
+                mediaQueryList.addListener(notify);
+                return ()=>{
+                    mediaQueryList.removeListener(notify);
+                };
+            }
+        ];
+    }, [
+        getDefaultSnapshot,
+        matchMedia,
+        query
+    ]);
+    const match = maybeReactUseSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+    return match;
+}
+function useMediaQuery(queryInput, options = {}) {
+    const theme = (0, _system.useThemeWithoutDefault)();
+    // Wait for jsdom to support the match media feature.
+    // All the browsers MUI support have this built-in.
+    // This defensive check is here for simplicity.
+    // Most of the time, the match media logic isn't central to people tests.
+    const supportMatchMedia = typeof window !== "undefined" && typeof window.matchMedia !== "undefined";
+    const { defaultMatches = false, matchMedia = supportMatchMedia ? window.matchMedia : null, ssrMatchMedia = null, noSsr = false } = (0, _system.getThemeProps)({
+        name: "MuiUseMediaQuery",
+        props: options,
+        theme
+    });
+    if (typeof queryInput === "function" && theme === null) console.error([
+        "MUI: The `query` argument provided is invalid.",
+        "You are providing a function without a theme in the context.",
+        "One of the parent elements needs to use a ThemeProvider."
+    ].join("\n"));
+    let query = typeof queryInput === "function" ? queryInput(theme) : queryInput;
+    query = query.replace(/^@media( ?)/m, "");
+    // TODO: Drop `useMediaQueryOld` and use  `use-sync-external-store` shim in `useMediaQueryNew` once the package is stable
+    const useMediaQueryImplementation = maybeReactUseSyncExternalStore !== undefined ? useMediaQueryNew : useMediaQueryOld;
+    const match = useMediaQueryImplementation(query, defaultMatches, matchMedia, ssrMatchMedia, noSsr);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    _react.useDebugValue({
+        query,
+        match
+    });
+    return match;
+}
+
+},{"react":"21dqq","@mui/system":"Q0Zql","../utils/useEnhancedEffect":"jIOpS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eYtXA":[function(require,module,exports) {
+"use strict";
+"use client";
+var _interopRequireDefault = require("1a2787d0d84e43df");
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _createSvgIcon = _interopRequireDefault(require("b37f83d3ef950822"));
+var _jsxRuntime = require("cebdb6f22315edc5");
+var _default = (0, _createSvgIcon.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+    d: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+}), "Menu");
+exports.default = _default;
+
+},{"1a2787d0d84e43df":"7XM86","b37f83d3ef950822":"lVV9C","cebdb6f22315edc5":"6AEwr"}],"7XM86":[function(require,module,exports) {
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        "default": obj
+    };
+}
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+},{}],"lVV9C":[function(require,module,exports) {
+"use strict";
+"use client";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _utils.createSvgIcon;
+    }
+});
+var _utils = require("21f2d1dcc9f0020d");
+
+},{"21f2d1dcc9f0020d":"9bp9M"}],"fT2dk":[function(require,module,exports) {
 module.exports = require("63c116bfd33e05ad").getBundleURL("bLxZJ") + "Logo.19ee082b.webp" + "?" + Date.now();
 
 },{"63c116bfd33e05ad":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -57184,9 +57408,76 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$ac22.prelude(module);
 
 try {
+// import React, { useState } from "react";
+// import { Box, InputBase, Paper, IconButton } from "@mui/material";
+// import SearchIcon from "@mui/icons-material/Search";
+// import EcoTubeLogo from "../assets/EcoTube.webp";
+// import { useNavigate } from "react-router-dom";
+// export default function SearchFieldHome() {
+//   const [searchTerm, setSearchTerm] = useState("");
+//   const navigate = useNavigate();
+//   const onhandleSubmit = (e) => {
+//     e.preventDefault();
+//     if (searchTerm) {
+//       navigate(`/search/${searchTerm}`);
+//       setSearchTerm("");
+//     }
+//   };
+//   return (
+//     <Box
+//       sx={{
+//         display: "flex",
+//         flexDirection: "column",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         height: "80vh",
+//       }}
+//     >
+//       <img
+//         src={EcoTubeLogo}
+//         alt="EcoTube Logo"
+//         style={{
+//           maxHeight: "100px",
+//           height: "99px",
+//           width: "313px",
+//           marginBottom: "20px",
+//         }}
+//       />
+//       <Paper
+//         component="form"
+//         onSubmit={onhandleSubmit}
+//         sx={{
+//           p: "2px 4px",
+//           display: "flex",
+//           alignItems: "center",
+//           width: 400,
+//           borderColor: "primary.main",
+//           borderWidth: "1.5px",
+//           borderRadius: "8px",
+//           borderStyle: "solid",
+//         }}
+//       >
+//         <InputBase
+//           sx={{ ml: 1, flex: 1 }}
+//           placeholder="Search"
+//           value={searchTerm}
+//           onChange={(e) => setSearchTerm(e.target.value)}
+//           inputProps={{ "aria-label": "search" }}
+//         />
+//         <IconButton
+//           type="submit"
+//           sx={{ p: "10px", color: "primary.main" }}
+//           aria-label="search"
+//         >
+//           <SearchIcon />
+//         </IconButton>
+//       </Paper>
+//     </Box>
+//   );
+// }
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>SearchAreaHome);
+parcelHelpers.export(exports, "default", ()=>SearchFieldHome);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -57197,10 +57488,12 @@ var _ecoTubeWebp = require("../assets/EcoTube.webp");
 var _ecoTubeWebpDefault = parcelHelpers.interopDefault(_ecoTubeWebp);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-function SearchAreaHome() {
+function SearchFieldHome() {
     _s();
     const [searchTerm, setSearchTerm] = (0, _react.useState)("");
     const navigate = (0, _reactRouterDom.useNavigate)();
+    const theme = (0, _material.useTheme)();
+    const isMobile = (0, _material.useMediaQuery)(theme.breakpoints.down("sm"));
     const onhandleSubmit = (e)=>{
         e.preventDefault();
         if (searchTerm) {
@@ -57214,21 +57507,23 @@ function SearchAreaHome() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            height: "80vh"
+            height: "80vh",
+            width: "100%",
+            margin: "auto"
         },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _ecoTubeWebpDefault.default),
                 alt: "EcoTube Logo",
                 style: {
-                    maxHeight: "100px",
-                    height: "99px",
-                    width: "313px",
+                    objectFit: "contain",
+                    maxHeight: isMobile ? "50px" : "100px",
+                    width: isMobile ? "156px" : "313px",
                     marginBottom: "20px"
                 }
             }, void 0, false, {
                 fileName: "src/components/SearchFieldHome.jsx",
-                lineNumber: 28,
+                lineNumber: 107,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Paper), {
@@ -57238,7 +57533,7 @@ function SearchAreaHome() {
                     p: "2px 4px",
                     display: "flex",
                     alignItems: "center",
-                    width: 400,
+                    width: isMobile ? "90%" : 400,
                     borderColor: "primary.main",
                     borderWidth: "1.5px",
                     borderRadius: "8px",
@@ -57258,7 +57553,7 @@ function SearchAreaHome() {
                         }
                     }, void 0, false, {
                         fileName: "src/components/SearchFieldHome.jsx",
-                        lineNumber: 39,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.IconButton), {
@@ -57270,35 +57565,37 @@ function SearchAreaHome() {
                         "aria-label": "search",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                             fileName: "src/components/SearchFieldHome.jsx",
-                            lineNumber: 47,
+                            lineNumber: 143,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/SearchFieldHome.jsx",
-                        lineNumber: 46,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/SearchFieldHome.jsx",
-                lineNumber: 29,
+                lineNumber: 117,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/SearchFieldHome.jsx",
-        lineNumber: 21,
+        lineNumber: 96,
         columnNumber: 5
     }, this);
 }
-_s(SearchAreaHome, "wjbP4zVEBL8ya0shEuwo30QWfMs=", false, function() {
+_s(SearchFieldHome, "9Lmfslk3dl0aI2f27r8GrLludbI=", false, function() {
     return [
-        (0, _reactRouterDom.useNavigate)
+        (0, _reactRouterDom.useNavigate),
+        (0, _material.useTheme),
+        (0, _material.useMediaQuery)
     ];
 });
-_c = SearchAreaHome;
+_c = SearchFieldHome;
 var _c;
-$RefreshReg$(_c, "SearchAreaHome");
+$RefreshReg$(_c, "SearchFieldHome");
 
   $parcel$ReactRefreshHelpers$ac22.postlude(module);
 } finally {
@@ -57320,29 +57617,7 @@ var _default = (0, _createSvgIcon.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("p
 }), "Search");
 exports.default = _default;
 
-},{"fba53bc247860689":"7XM86","896a02316301fc50":"lVV9C","b874acb5710c0313":"6AEwr"}],"7XM86":[function(require,module,exports) {
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        "default": obj
-    };
-}
-module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-},{}],"lVV9C":[function(require,module,exports) {
-"use strict";
-"use client";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "default", {
-    enumerable: true,
-    get: function() {
-        return _utils.createSvgIcon;
-    }
-});
-var _utils = require("21f2d1dcc9f0020d");
-
-},{"21f2d1dcc9f0020d":"9bp9M"}],"iMwNg":[function(require,module,exports) {
+},{"fba53bc247860689":"7XM86","896a02316301fc50":"lVV9C","b874acb5710c0313":"6AEwr"}],"iMwNg":[function(require,module,exports) {
 module.exports = require("fa8c1aa390f3916d").getBundleURL("bLxZJ") + "EcoTube.a1b53ad0.webp" + "?" + Date.now();
 
 },{"fa8c1aa390f3916d":"lgJ39"}],"4kNDP":[function(require,module,exports) {
@@ -58113,8 +58388,12 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _material = require("@mui/material");
 var _menu = require("@mui/icons-material/Menu");
 var _menuDefault = parcelHelpers.interopDefault(_menu);
+var _search = require("@mui/icons-material/Search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
 var _logoWebp = require("../assets/Logo.webp");
 var _logoWebpDefault = parcelHelpers.interopDefault(_logoWebp);
+var _logoOnlyWebp = require("../assets/LogoOnly.webp");
+var _logoOnlyWebpDefault = parcelHelpers.interopDefault(_logoOnlyWebp);
 var _reactRouterDom = require("react-router-dom");
 var _searchBar = require("./SearchBar");
 var _searchBarDefault = parcelHelpers.interopDefault(_searchBar);
@@ -58122,8 +58401,14 @@ var _s = $RefreshSig$();
 function NavBar() {
     _s();
     const navigate = (0, _reactRouterDom.useNavigate)();
+    const theme = (0, _material.useTheme)();
+    const isMobile = (0, _material.useMediaQuery)(theme.breakpoints.down("md"));
     const [searchTerm, setSearchTerm] = (0, _react.useState)("");
     const [drawerOpen, setDrawerOpen] = (0, _reactDefault.default).useState(false);
+    const [searchBarOpen, setSearchBarOpen] = (0, _react.useState)(false);
+    const handleSearchIconClick = ()=>{
+        setSearchBarOpen(!searchBarOpen);
+    };
     const handleDrawerToggle = ()=>{
         setDrawerOpen(!drawerOpen);
     };
@@ -58141,11 +58426,14 @@ function NavBar() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
                 color: "inherit",
+                sx: {
+                    color: "primary.main"
+                },
                 onClick: ()=>navigate("/about"),
                 children: "About"
             }, void 0, false, {
                 fileName: "src/components/NavBar.jsx",
-                lineNumber: 41,
+                lineNumber: 55,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
@@ -58153,7 +58441,7 @@ function NavBar() {
                 children: "Settings"
             }, void 0, false, {
                 fileName: "src/components/NavBar.jsx",
-                lineNumber: 44,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
@@ -58162,13 +58450,13 @@ function NavBar() {
                 children: "Signup"
             }, void 0, false, {
                 fileName: "src/components/NavBar.jsx",
-                lineNumber: 45,
+                lineNumber: 59,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/NavBar.jsx",
-        lineNumber: 40,
+        lineNumber: 54,
         columnNumber: 5
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.AppBar), {
@@ -58181,79 +58469,84 @@ function NavBar() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.IconButton), {
                         edge: "start",
-                        color: "inherit",
                         "aria-label": "menu",
                         sx: {
                             mr: 2,
                             display: {
                                 xs: "block",
                                 md: "none"
-                            }
+                            },
+                            color: "primary.main"
                         },
                         onClick: handleDrawerToggle,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuDefault.default), {}, void 0, false, {
                             fileName: "src/components/NavBar.jsx",
-                            lineNumber: 61,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/NavBar.jsx",
-                        lineNumber: 54,
+                        lineNumber: 68,
                         columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: isMobile ? (0, _logoOnlyWebpDefault.default) : (0, _logoWebpDefault.default),
+                        alt: "EcoTube Logo",
+                        style: {
+                            maxHeight: "30px",
+                            marginRight: "10px",
+                            cursor: "pointer"
+                        },
+                        onClick: ()=>navigate("/")
+                    }, void 0, false, {
+                        fileName: "src/components/NavBar.jsx",
+                        lineNumber: 78,
+                        columnNumber: 9
+                    }, this),
+                    isMobile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.IconButton), {
+                        sx: {
+                            color: "primary.main"
+                        },
+                        "aria-label": "search",
+                        onClick: handleSearchIconClick,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                            fileName: "src/components/NavBar.jsx",
+                            lineNumber: 90,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/NavBar.jsx",
+                        lineNumber: 85,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                         sx: {
                             flexGrow: 1,
-                            display: "flex",
+                            display: isMobile && !searchBarOpen ? "none" : "flex",
                             alignItems: "center"
                         },
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                // loading="lazy"
-                                src: (0, _logoWebpDefault.default),
-                                alt: "EcoTube Logo",
-                                style: {
-                                    maxHeight: "60px",
-                                    cursor: "pointer"
-                                },
-                                onClick: ()=>navigate("/")
-                            }, void 0, false, {
-                                fileName: "src/components/NavBar.jsx",
-                                lineNumber: 64,
-                                columnNumber: 11
-                            }, this),
+                            isMobile && searchBarOpen,
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchBarDefault.default), {
                                 searchTerm: searchTerm,
                                 setSearchTerm: setSearchTerm,
                                 onhandleSubmit: onhandleSubmit
                             }, void 0, false, {
                                 fileName: "src/components/NavBar.jsx",
-                                lineNumber: 71,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/NavBar.jsx",
-                        lineNumber: 63,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-                        sx: {
-                            display: {
-                                xs: "none",
-                                md: "flex"
-                            }
-                        },
-                        children: navItems
-                    }, void 0, false, {
-                        fileName: "src/components/NavBar.jsx",
-                        lineNumber: 77,
-                        columnNumber: 9
-                    }, this)
+                    !isMobile && navItems
                 ]
             }, void 0, true, {
                 fileName: "src/components/NavBar.jsx",
-                lineNumber: 53,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Drawer), {
@@ -58275,34 +58568,36 @@ function NavBar() {
                                 primary: text
                             }, void 0, false, {
                                 fileName: "src/components/NavBar.jsx",
-                                lineNumber: 90,
+                                lineNumber: 124,
                                 columnNumber: 15
                             }, this)
                         }, text, false, {
                             fileName: "src/components/NavBar.jsx",
-                            lineNumber: 82,
+                            lineNumber: 116,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "src/components/NavBar.jsx",
-                    lineNumber: 80,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/NavBar.jsx",
-                lineNumber: 79,
+                lineNumber: 113,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/NavBar.jsx",
-        lineNumber: 52,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 }
-_s(NavBar, "vCluXz5x71VnLNofhi1HFXWFea8=", false, function() {
+_s(NavBar, "6DBL6ltuBE8CRG2DJUBz1X2rsrA=", false, function() {
     return [
-        (0, _reactRouterDom.useNavigate)
+        (0, _reactRouterDom.useNavigate),
+        (0, _material.useTheme),
+        (0, _material.useMediaQuery)
     ];
 });
 _c = NavBar;
@@ -58314,22 +58609,7 @@ $RefreshReg$(_c, "NavBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eYtXA":[function(require,module,exports) {
-"use strict";
-"use client";
-var _interopRequireDefault = require("1a2787d0d84e43df");
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _createSvgIcon = _interopRequireDefault(require("b37f83d3ef950822"));
-var _jsxRuntime = require("cebdb6f22315edc5");
-var _default = (0, _createSvgIcon.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
-    d: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-}), "Menu");
-exports.default = _default;
-
-},{"1a2787d0d84e43df":"7XM86","b37f83d3ef950822":"lVV9C","cebdb6f22315edc5":"6AEwr"}],"lM1DZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@mui/icons-material/Menu":"eYtXA","../assets/Logo.webp":"fT2dk","react-router-dom":"9xmpe","./SearchBar":"lM1DZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/icons-material/Search":"b4Utn","../assets/LogoOnly.webp":"6AYbL"}],"lM1DZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e029 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -58430,6 +58710,8 @@ var _checkCircle = require("@mui/icons-material/CheckCircle");
 var _checkCircleDefault = parcelHelpers.interopDefault(_checkCircle);
 var _videos = require("../components/Videos");
 var _videosDefault = parcelHelpers.interopDefault(_videos);
+var _comments = require("../components/Comments");
+var _commentsDefault = parcelHelpers.interopDefault(_comments);
 var _loader = require("../components/Loader");
 var _loaderDefault = parcelHelpers.interopDefault(_loader);
 var _fetchFromApi = require("../utils/fetchFromApi");
@@ -58443,6 +58725,14 @@ const VideoDetail = ()=>{
     const { id } = (0, _reactRouterDom.useParams)();
     const [showRelatedVideos, setShowRelatedVideos] = (0, _react.useState)(false);
     const [showFullDescription, setShowFullDescription] = (0, _react.useState)(false);
+    const [comments, setComments] = (0, _react.useState)([]);
+    const [showComments, setShowComments] = (0, _react.useState)(false);
+    const toggleComments = ()=>{
+        if (!showComments) (0, _fetchFromApi.fetchFromApi)(`commentThreads?part=snippet&videoId=${id}`).then((data)=>{
+            setComments(data.items);
+        });
+        setShowComments(!showComments);
+    };
     (0, _react.useEffect)(()=>{
         (0, _fetchFromApi.fetchFromApi)(`videos?part=snippet,statistics&id=${id}`).then((data)=>setVideoDetail(data.items[0]));
     }, [
@@ -58463,7 +58753,7 @@ const VideoDetail = ()=>{
     };
     if (!videoDetail?.snippet) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loaderDefault.default), {}, void 0, false, {
         fileName: "src/pages/VideoDetail.jsx",
-        lineNumber: 45,
+        lineNumber: 58,
         columnNumber: 37
     }, undefined);
     const { snippet: { title, channelId, channelTitle, description }, statistics: { viewCount, likeCount } } = videoDetail;
@@ -58471,8 +58761,8 @@ const VideoDetail = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navBarDefault.default), {}, void 0, false, {
                 fileName: "src/pages/VideoDetail.jsx",
-                lineNumber: 54,
-                columnNumber: 5
+                lineNumber: 67,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                 minHeight: "95vh",
@@ -58498,8 +58788,8 @@ const VideoDetail = ()=>{
                                         loading: "lazy"
                                     }, void 0, false, {
                                         fileName: "src/pages/VideoDetail.jsx",
-                                        lineNumber: 59,
-                                        columnNumber: 13
+                                        lineNumber: 72,
+                                        columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                                         color: "#fff",
@@ -58509,8 +58799,8 @@ const VideoDetail = ()=>{
                                         children: title
                                     }, void 0, false, {
                                         fileName: "src/pages/VideoDetail.jsx",
-                                        lineNumber: 65,
-                                        columnNumber: 13
+                                        lineNumber: 78,
+                                        columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Stack), {
                                         direction: "row",
@@ -58539,19 +58829,19 @@ const VideoDetail = ()=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "src/pages/VideoDetail.jsx",
-                                                            lineNumber: 81,
-                                                            columnNumber: 19
+                                                            lineNumber: 94,
+                                                            columnNumber: 21
                                                         }, undefined)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/pages/VideoDetail.jsx",
-                                                    lineNumber: 76,
-                                                    columnNumber: 17
+                                                    lineNumber: 89,
+                                                    columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/VideoDetail.jsx",
-                                                lineNumber: 75,
-                                                columnNumber: 15
+                                                lineNumber: 88,
+                                                columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Stack), {
                                                 direction: "row",
@@ -58569,8 +58859,8 @@ const VideoDetail = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/pages/VideoDetail.jsx",
-                                                        lineNumber: 87,
-                                                        columnNumber: 17
+                                                        lineNumber: 100,
+                                                        columnNumber: 19
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                                                         variant: "body1",
@@ -58583,20 +58873,20 @@ const VideoDetail = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/pages/VideoDetail.jsx",
-                                                        lineNumber: 90,
-                                                        columnNumber: 17
+                                                        lineNumber: 103,
+                                                        columnNumber: 19
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/VideoDetail.jsx",
-                                                lineNumber: 86,
-                                                columnNumber: 15
+                                                lineNumber: 99,
+                                                columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/VideoDetail.jsx",
-                                        lineNumber: 68,
-                                        columnNumber: 13
+                                        lineNumber: 81,
+                                        columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                                         p: 2,
@@ -58607,34 +58897,83 @@ const VideoDetail = ()=>{
                                                 children: truncateDescription(description)
                                             }, void 0, false, {
                                                 fileName: "src/pages/VideoDetail.jsx",
-                                                lineNumber: 96,
-                                                columnNumber: 11
+                                                lineNumber: 109,
+                                                columnNumber: 17
                                             }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
-                                                onClick: toggleDescription,
-                                                color: "primary",
-                                                children: showFullDescription ? "Show Less" : "Show More"
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Stack), {
+                                                spacing: 1,
+                                                direction: "column",
+                                                sx: {
+                                                    marginTop: "10px"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                                                        sx: {
+                                                            maxWidth: "200px"
+                                                        },
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
+                                                            onClick: toggleDescription,
+                                                            color: "primary",
+                                                            fullWidth: true,
+                                                            children: showFullDescription ? "Show Less" : "Show More"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/VideoDetail.jsx",
+                                                            lineNumber: 114,
+                                                            columnNumber: 15
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/VideoDetail.jsx",
+                                                        lineNumber: 113,
+                                                        columnNumber: 13
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                                                        sx: {
+                                                            maxWidth: "200px"
+                                                        },
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Button), {
+                                                            variant: "outlined",
+                                                            onClick: toggleComments,
+                                                            fullWidth: true,
+                                                            children: showComments ? "Hide Comments" : "Show Comments"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/VideoDetail.jsx",
+                                                            lineNumber: 120,
+                                                            columnNumber: 15
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/VideoDetail.jsx",
+                                                        lineNumber: 119,
+                                                        columnNumber: 13
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/VideoDetail.jsx",
+                                                lineNumber: 112,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            showComments && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _commentsDefault.default), {
+                                                comments: comments
                                             }, void 0, false, {
                                                 fileName: "src/pages/VideoDetail.jsx",
-                                                lineNumber: 99,
-                                                columnNumber: 11
+                                                lineNumber: 129,
+                                                columnNumber: 28
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/VideoDetail.jsx",
-                                        lineNumber: 95,
-                                        columnNumber: 13
+                                        lineNumber: 108,
+                                        columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/VideoDetail.jsx",
-                                lineNumber: 58,
-                                columnNumber: 11
+                                lineNumber: 71,
+                                columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/VideoDetail.jsx",
-                            lineNumber: 57,
-                            columnNumber: 9
+                            lineNumber: 70,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
                             px: 2,
@@ -58651,38 +58990,38 @@ const VideoDetail = ()=>{
                                     children: "Show Related Videos"
                                 }, void 0, false, {
                                     fileName: "src/pages/VideoDetail.jsx",
-                                    lineNumber: 114,
-                                    columnNumber: 13
+                                    lineNumber: 141,
+                                    columnNumber: 15
                                 }, undefined),
                                 showRelatedVideos && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _videosDefault.default), {
                                     videos: videos,
                                     direction: "column"
                                 }, void 0, false, {
                                     fileName: "src/pages/VideoDetail.jsx",
-                                    lineNumber: 118,
-                                    columnNumber: 33
+                                    lineNumber: 145,
+                                    columnNumber: 35
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/VideoDetail.jsx",
-                            lineNumber: 107,
-                            columnNumber: 9
+                            lineNumber: 134,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/VideoDetail.jsx",
-                    lineNumber: 56,
-                    columnNumber: 7
+                    lineNumber: 69,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/VideoDetail.jsx",
-                lineNumber: 55,
-                columnNumber: 5
+                lineNumber: 68,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(VideoDetail, "4ofac9FjCJ+zFOKN40UN8sGGu0M=", false, function() {
+_s(VideoDetail, "RuQP9Gvw60vmNmJBWV+XCjq9zXg=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -58697,7 +59036,7 @@ $RefreshReg$(_c, "VideoDetail");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-player":"6tM2f","@mui/material":"40376","@mui/icons-material/CheckCircle":"7Uuk2","../components/Videos":"iBwUD","../components/Loader":"1OxQ9","../utils/fetchFromApi":"gz4GA","../components/NavBar":"eqUVf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6tM2f":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-player":"6tM2f","@mui/material":"40376","@mui/icons-material/CheckCircle":"7Uuk2","../components/Videos":"iBwUD","../components/Loader":"1OxQ9","../utils/fetchFromApi":"gz4GA","../components/NavBar":"eqUVf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Comments":"fYpIV"}],"6tM2f":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -65489,7 +65828,85 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
 });
 exports.default = HttpStatusCode;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8rjaY":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fYpIV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4a8f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4a8f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _material = require("@mui/material");
+const Comments = ({ comments })=>{
+    if (!comments || comments.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: "No comments found."
+    }, void 0, false, {
+        fileName: "src/components/Comments.jsx",
+        lineNumber: 5,
+        columnNumber: 50
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+        sx: {
+            padding: "20px"
+        },
+        children: comments.map((comment, index)=>{
+            const topLevelComment = comment?.snippet?.topLevelComment?.snippet;
+            if (!topLevelComment) return null; // Skips rendering if data is incomplete
+            const displayName = topLevelComment.authorDisplayName;
+            const cleanedDisplayName = displayName?.startsWith("@") ? displayName.substring(1) : displayName;
+            const commentText = topLevelComment.textOriginal;
+            console.log(commentText);
+            console.log(cleanedDisplayName);
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                sx: {
+                    marginBottom: "10px"
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "subtitle2",
+                        color: "gray",
+                        children: cleanedDisplayName
+                    }, void 0, false, {
+                        fileName: "src/components/Comments.jsx",
+                        lineNumber: 21,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "body2",
+                        children: commentText
+                    }, void 0, false, {
+                        fileName: "src/components/Comments.jsx",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, index, true, {
+                fileName: "src/components/Comments.jsx",
+                lineNumber: 20,
+                columnNumber: 11
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Comments.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Comments;
+exports.default = Comments;
+var _c;
+$RefreshReg$(_c, "Comments");
+
+  $parcel$ReactRefreshHelpers$4a8f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@mui/material":"40376","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8rjaY":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ed0f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

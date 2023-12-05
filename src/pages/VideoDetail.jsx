@@ -5,6 +5,7 @@ import { Typography, Box, Stack, Button } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import Videos from "../components/Videos";
+import Comments from "../components/Comments";
 import Loader from "../components/Loader";
 import { fetchFromApi } from "../utils/fetchFromApi";
 import NavBar from "../components/NavBar";
@@ -15,6 +16,18 @@ const VideoDetail = () => {
   const { id } = useParams();
   const [showRelatedVideos, setShowRelatedVideos] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const [comments, setComments] = useState([]);
+  const [showComments, setShowComments] = useState(false);
+
+  const toggleComments = () => {
+    if (!showComments) {
+      fetchFromApi(`commentThreads?part=snippet&videoId=${id}`).then((data) => {
+        setComments(data.items);
+      });
+    }
+    setShowComments(!showComments);
+  };
 
   useEffect(() => {
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`).then((data) =>
@@ -51,74 +64,88 @@ const VideoDetail = () => {
 
   return (
     <>
-    <NavBar/>
-    <Box minHeight="95vh" marginTop={1}>
-      <Stack direction={{ xs: "column", md: "row" }}>
-        <Box flex={1}>
-          <Box sx={{ width: "100%", top: "86px" }}>
-            <ReactPlayer
-              url={`https://www.youtube.com/watch?v=${id}`}
-              className="react-player"
-              controls
-              loading="lazy"
-            />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
-              {title}
-            </Typography>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              sx={{ color: "#fff" }}
-              py={1}
-              px={2}
-            >
-              <Link to={`/channel/${channelId}`}>
-                <Typography
-                  variant={{ sm: "subtitle1", md: "h6" }}
-                  color="#fff"
-                >
-                  {channelTitle}
-                  <CheckCircleIcon
-                    sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
-                  />
-                </Typography>
-              </Link>
-              <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(viewCount).toLocaleString()} views
-                </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(likeCount).toLocaleString()} likes
-                </Typography>
+      <NavBar />
+      <Box minHeight="95vh" marginTop={1}>
+        <Stack direction={{ xs: "column", md: "row" }}>
+          <Box flex={1}>
+            <Box sx={{ width: "100%", top: "86px" }}>
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=${id}`}
+                className="react-player"
+                controls
+                loading="lazy"
+              />
+              <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+                {title}
+              </Typography>
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                sx={{ color: "#fff" }}
+                py={1}
+                px={2}
+              >
+                <Link to={`/channel/${channelId}`}>
+                  <Typography
+                    variant={{ sm: "subtitle1", md: "h6" }}
+                    color="#fff"
+                  >
+                    {channelTitle}
+                    <CheckCircleIcon
+                      sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
+                    />
+                  </Typography>
+                </Link>
+                <Stack direction="row" gap="20px" alignItems="center">
+                  <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                    {parseInt(viewCount).toLocaleString()} views
+                  </Typography>
+                  <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                    {parseInt(likeCount).toLocaleString()} likes
+                  </Typography>
+                </Stack>
               </Stack>
-            </Stack>
-            <Box p={2}>
-          <Typography variant="body1" color="#fff">
-            {truncateDescription(description)}
-          </Typography>
-          <Button onClick={toggleDescription} color="primary">
-            {showFullDescription ? 'Show Less' : 'Show More'}
-          </Button>
-        </Box>
+              <Box p={2}>
+                <Typography variant="body1" color="#fff">
+                  {truncateDescription(description)}
+                </Typography>
+                <Stack spacing={1} direction="column" sx={{ marginTop: "10px" }}>
+            <Box sx={{ maxWidth: '200px' }}> 
+              <Button onClick={toggleDescription} color="primary" fullWidth>
+                {showFullDescription ? "Show Less" : "Show More"}
+              </Button>
+            </Box>
+
+            <Box sx={{ maxWidth: '200px' }}> 
+              <Button
+                variant="outlined"
+                onClick={toggleComments}
+                fullWidth
+              >
+                {showComments ? "Hide Comments" : "Show Comments"}
+              </Button>
+            </Box>
+          </Stack>
+          {showComments && <Comments comments={comments} />}
+              </Box>
+            </Box>
           </Box>
           
-        </Box>
-  
-        <Box
-          px={2}
-          py={{ md: 1, xs: 5 }}
-          justifyContent="center"
-          alignItems="center"
-        >
-          {!showRelatedVideos && (
-            <Button variant="outlined" onClick={fetchRelatedVideos}>
-              Show Related Videos
-            </Button>
-          )}
-          {showRelatedVideos && <Videos videos={videos} direction="column" />}
-        </Box>
-      </Stack>
-    </Box>
+          <Box
+            px={2}
+            py={{ md: 1, xs: 5 }}
+            justifyContent="center"
+            alignItems="center"
+          >
+            {!showRelatedVideos && (
+              <Button variant="outlined" onClick={fetchRelatedVideos}>
+                Show Related Videos
+              </Button>
+            )}
+            {showRelatedVideos && <Videos videos={videos} direction="column" />}
+          </Box>
+        </Stack>
+      </Box>
     </>
   );
 };

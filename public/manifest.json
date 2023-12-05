@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "EcoTube PWA",
   "icons": [
     {
       "src": "logo.png",
@@ -8,14 +8,20 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "icon192.png",
       "type": "image/png",
-      "sizes": "192x128"
+      "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "icon512.png",
       "type": "image/png",
-      "sizes": "512x331"
+      "sizes": "512x512"
+    },
+    {
+      "src": "icon144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
     }
   ],
   "start_url": ".",
